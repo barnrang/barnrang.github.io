@@ -188,7 +188,6 @@
 .post-meta {
     font-size: $small-font-size;
     color: $grey-color;
-    background-color: $grey-color-dark;
 }
 
 .post-link {
@@ -196,9 +195,21 @@
     font-size: 24px;
     background-color: $grey-color-dark;
 }
+.showtitle{
+  color: red;
+}
 
+.readmore{
+  border: 1px solid black;
+  font-size: 16px;
+  text-align: center;
+}
 
-
+.excerpt{
+  margin-left: 15px;
+  margin-right: 15px;
+  font-size: 10px;
+}
 
 /**
  * Posts
