@@ -5,9 +5,11 @@ layout: default
 <div class="home">
 {% for post in site.posts %}
 <header>
+  <br>
   <h1><a class="showtitle" href="{{ post.url | prepend: site.baseurl }}">{{post.title}}</a></h1>
 <p class="post-meta"><span class="date">{{ post.date | date: "%b %-d, %Y" }}</span> @{{post.author}}</p>
 </header>
+<img src="{{post.images}}" margin: auto>
 {% if post.content contains '<!--more-->'%}
 <div class="excerpt">
   {{post.content|split: '<!--more-->'|first}}
@@ -17,5 +19,7 @@ layout: default
   </div>
 <p>
       {% endif %}
+      <br>
+      <hr color="black">
 {% endfor %}
 </div>

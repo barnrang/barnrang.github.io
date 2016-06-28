@@ -195,14 +195,23 @@
     font-size: 24px;
     background-color: $grey-color-dark;
 }
+@font-face {
+    font-family: "prachachon";
+    src: url(TS-Prachachon-NP.ttf);
+}
 .showtitle{
   color: red;
+  font-family: "prachachon";
+  font-size: 48px;
 }
 
 .readmore{
   border: 1px solid black;
   font-size: 16px;
   text-align: center;
+  width: 100px;
+  height: 20px;
+  margin: auto;
 }
 
 .excerpt{
