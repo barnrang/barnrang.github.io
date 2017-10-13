@@ -32,7 +32,7 @@ Solution: หากพิจารณาที่จุด $$ O $$ ซึ่ง�
 ![](https://lh3.googleusercontent.com/qHliRp1RaLG2PSAMiTSkaoxk0QoYFw76gG_VguxMvuXUDxUJGL9cISN52DDF30Sj6DiLI2XQi9F5ZZCU18ckifNpJYbrCOQ8qPJj-kvwO8JEgaTkaT6OU0RbDq-ETBZDcbeXbm-syIGKroBUoeo_ck6a8n0KufJwDlShmvv8Ps1-ira0m0kvEycwJCTlp8o4LMJgCA380a8BocZN5A8ZI0LU_oG8Ui8TnS4GXYJKYhszY35DWyJgTQc4h1galgdXHjZROg29rYYL-_0pJKpzt17pm4BfQ42vu4brWGXy8NJt0_rA1MNbdZFa8RMZU6L0HF0h7TL31TcMAQKqYqNWXy23gnY38UG34vqHnr80kx_Tzm2veG0aSj1k9fEqizDxPRhL1Gn5luHXsVkQjGWztLPFQvLYaocibEahJqHe2v3-ehQVa_oLOgg9vcnsMZT4elfCGg3eGT7afU_jKSVLpPxwahH1vRdrEsnF52j52mbwMxEKXI3D6NhWDKa_P8L0NBVdkibsOTmAnsGH-E74JW4SE3h-BazoF4mD2rPAhULXyjj5RBn0Mv9gDfrh699ombsi=w431-h397-no)\\
 หากลองพิจารณาดู จะพบว่าเงื่อนไขที่ทำให้ตะเกียบทาบเส้นคือการที่ $$ \displaystyle\frac{d\sin{\theta}}{2}\geq y $$
 
-สังเกตเห็นได้ว่าที่ $\latex \theta$ ที่ต่างกันจะมีช่วงของค่า $$ y $$ ที่แตกต่างกันออกไป หากเขียนให้ชัดเจนก็
+สังเกตเห็นได้ว่าที่ $$\latex \theta$$ ที่ต่างกันจะมีช่วงของค่า $$ y $$ ที่แตกต่างกันออกไป หากเขียนให้ชัดเจนก็
 
 $$ 0\leq y\leq \displaystyle\frac{d\sin{\theta}}{2} $$
 
