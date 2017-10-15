@@ -19,11 +19,11 @@ $$ y=2-\cos{2t\theta} $$
 
 พิจาราณาความเร็วตามแกน $$ x $$ และ $$ y $$ ที่เวลาใดๆ โดยหาค่าต่อไปนี้
 
-<!-- more -->
+<!--more-->
 
-$$ \displaystyle\frac{dx}{dt}=A(B-C\cos{2t\theta})&amp;bg=1a1a1a&amp;fg=e5e5e5 $$
+$$ \displaystyle\frac{dx}{dt}=A(B-C\cos{2t\theta})$$
 
-$$ \displaystyle\frac{dy}{dt}=D\sin{2t\theta}&amp;bg=1a1a1a&amp;fg=e5e5e5 $$
+$$ \displaystyle\frac{dy}{dt}=D\sin{2t\theta}$$
 
 หากทำการรวมความเร็วของแกน $$ x $$ และแกน $$ y $$ เข้าด้วยกัน จะได้ว่า
 

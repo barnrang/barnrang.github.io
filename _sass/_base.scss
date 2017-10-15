@@ -172,7 +172,9 @@ pre {
 }
 
 .wrapper.content {
-  margin-left: 300px;
+  margin-left: $sidebar-width;
+  margin-right: 0px;
+  // height: 100vh;
 }
 
 
@@ -181,6 +183,11 @@ pre {
     margin-left: 0px;
     padding-top: 70px;
   }
+}
+
+.home {
+  margin-left: auto;
+  margin-right: auto;
 }
 
 /**

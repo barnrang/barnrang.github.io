@@ -6,7 +6,7 @@
     border-bottom: 1px solid $grey-color-dark;
     // min-height: 20px;
     height: 100vh;
-    width: 300px;
+    width: $sidebar-width;
     background-color: #FFE39F;
     // Positioning context for the mobile navigation icon
     position: fixed;
@@ -112,10 +112,15 @@
  * Site footer
  */
 .site-footer {
-  font-family: "CSPraJad";
-    margin-left: 300px;
+    font-family: "CSPraJad";
+    width: 100%;
+    bottom: 0px;
     border-top: 1px solid $grey-color-dark;
     padding: $spacing-unit 0;
+}
+
+.site-footer .wrapper {
+  margin-left: $sidebar-width;
 }
 
 @media screen and(max-width: 800px) {
