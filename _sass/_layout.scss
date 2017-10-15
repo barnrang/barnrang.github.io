@@ -4,10 +4,20 @@
 .site-header {
     border-top: 15px solid $grey-color-dark;
     border-bottom: 1px solid $grey-color-dark;
-    min-height: 56px;
-
+    // min-height: 20px;
+    height: 100vh;
+    width: 300px;
+    background-color: #FFE39F;
     // Positioning context for the mobile navigation icon
-    position: relative;
+    position: fixed;
+}
+
+@media screen and (max-width: 800px) {
+  .site-header{
+    height: auto;
+    min-height: 56px;
+    width: 100%;
+  }
 }
 
 .site-title {
@@ -26,7 +36,7 @@
 }
 
 .site-nav {
-    float: right;
+    float: left;
     line-height: 56px;
     font-family: courier;
     .menu-icon {
@@ -51,7 +61,6 @@
         border: 1px solid $grey-color-light;
         border-radius: 5px;
         text-align: right;
-
         .menu-icon {
             display: block;
             float: right;
@@ -93,15 +102,26 @@
     }
 }
 
-
+@media screen and(max-width: 800px) {
+  .site-nav {
+    float: right;
+  }
+}
 
 /**
  * Site footer
  */
 .site-footer {
   font-family: "CSPraJad";
+    margin-left: 300px;
     border-top: 1px solid $grey-color-dark;
     padding: $spacing-unit 0;
+}
+
+@media screen and(max-width: 800px) {
+  .site-footer {
+    margin-left: 0px;
+  }
 }
 
 .footer-heading {
@@ -115,9 +135,14 @@
     margin-left: 0;
 }
 
+footer {
+  background-color: #7F7150;
+  color: black;
+}
+
 .footer-col-wrapper {
     font-size: 15px;
-    color: $grey-color;
+    // color: $grey-color;
     margin-left: -$spacing-unit / 2;
     @extend %clearfix;
 }
