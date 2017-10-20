@@ -10,7 +10,7 @@ title: BARNrang Daily
 email: barnrang@gmail.com
 description: The one who is passion in Mathematics and Computer stuff with hot Cocoa or Matcha.
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "http://barnrang.com" # the base hostname & protocol for your site
+url: "http://barnrang.github.io" # the base hostname & protocol for your site
 twitter_username: jekyllrb
 github_username:  barnrang
 
