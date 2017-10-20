@@ -20,16 +20,16 @@
           {% endif %}
         {% endfor %}
         <a href="https://www.magkun.com" target="_blank">My friend!!</a>
-      </div>
-      {% if page.layout == 'post' %}
-        {% if page.series %}
-          {% for post in site.posts %}
-            {% if post.series == page.series %}
-              <a href={{post.url}}>{{post.title}}</a><br>
-            {% endif %}
-          {% endfor %}
+        {% if page.layout == 'post' %}
+          {% if page.series %}
+            {% for post in site.posts %}
+              {% if post.series == page.series %}
+                <a href={{post.url}}>{{post.title}}</a><br>
+              {% endif %}
+            {% endfor %}
+          {% endif %}
         {% endif %}
-      {% endif %}
+      </div>
     </nav>
 
   </div>
