@@ -263,6 +263,13 @@ footer {
 /**
  * Posts
  */
+.next-post {
+  float: right;
+}
+
+.prev-post{
+  float: left;
+}
 .post-header {
     margin-bottom: $spacing-unit;
 }

@@ -11,5 +11,17 @@ layout: default
   <div class="post-content" itemprop="articleBody">
     {{ content }}
   </div>
-
+  {% if page.series %}
+    {% for post in site.posts %}
+      {% assign next = page.chapter | plus:1 %}
+      {% assign prev = page.chapter | minus:1 %}
+      {% assign now = post.chapter | times:1 %}
+      {% if post.series == page.series and next == now %}
+        <a href="{{post.url}}" class="next-post">Next chapter</a>
+      {% endif %}
+      {% if post.series == page.series and prev == now %}
+        <a href="{{post.url}}" class="prev-post">Previous chapter</a>
+      {% endif %}
+    {% endfor %}
+  {% endif %}
 </article>

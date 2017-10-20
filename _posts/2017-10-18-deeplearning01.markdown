@@ -1,9 +1,11 @@
 ---
 layout: post
 title:  "Deep Learning CS231 kNN-classifier"
-date:   2016-09-07
+date:   2017-10-18
 categories: CS231
 author: barnrang
+series: cs231
+chapter: 1
 ---
 
 นี่ก็เป็นโพสต์ที่ทำออกมาเพื่อทบทวนสิ่งที่เคยทำมาในคอร์สออนไลน์ CS231 Convolutional Neural Networks for Visual Recognition และหวังว่าจะมีประโยชน์กับผู้ที่เดินผ่านทางมาหรือสนใจในเรื่อง machine learning
