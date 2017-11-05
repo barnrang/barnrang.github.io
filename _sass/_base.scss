@@ -177,11 +177,17 @@ pre {
   // height: 100vh;
 }
 
+.wrapper.footer {
+  margin-left: $sidebar-width;
+}
 
 @media screen and (max-width: 800px) {
   .wrapper.content{
     margin-left: 0px;
     padding-top: 70px;
+  }
+  .wrapper.footer{
+    margin-left: 0px;
   }
 }
 
