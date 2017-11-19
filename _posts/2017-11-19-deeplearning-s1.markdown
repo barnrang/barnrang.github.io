@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "อ่านง่าย: คอมสร้างรูป Generative Adversarial Networks (GANs)"
-date:   2017-10-21
+date:   2017-11-19
 categories: CS231
 author: barnrang
 series: cs231
