@@ -11,7 +11,7 @@ email: barnrang@gmail.com
 description: The one who is passion in Mathematics and Computer stuff with hot Cocoa or Matcha.
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "http://barnrang.github.io" # the base hostname & protocol for your site
-twitter_username: jekyllrb
+twitter_username: barnrang
 github_username:  barnrang
 permalink: none
 # Build settings
