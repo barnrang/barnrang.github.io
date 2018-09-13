@@ -1,0 +1,144 @@
+---
+layout: post
+title:  "CUDA GPU Programming 1: Kernel กับการประกาศคำสั่ง - โปรแกรมบวกเลข"
+date:   2018-09-10
+categories: computer
+author: barnrang
+series: cuda
+chapter: 1
+---
+
+*คำเตือน: บทความต่อไปนี้มีจุดมุ่งหมายเพื่อการใช้ GPU ในงานหลากหลายประเภทเพื่อให้เข้าใจถีงหลักการทำงานมากขึ้น ไม่ใช่บทความเพื่อเขียนเกมเป็นหลัก*
+
+*บทความนี้ไม่ได้มีไว้เพื่อสอนพื้นฐาน เหมาะสำหรับผู้อ่านที่มีประสบการณ์ในการใช้ ภาษา C หรือเข้าใจพื้นฐานการเขียนโปรแกรม*
+
+{% highlight C %}
+//โปรแกรมบวกเลขใน GPU
+#include <stdio.h>
+#include <cuda_runtime.h>
+#include <helper_cuda.h>
+
+__global__ void add_kernel(int a, int b, int *c) {
+    *c = a + b;
+}
+
+int main(){
+    int h_c, *d_c; // h - host (CPU), d - device (GPU)
+
+    //แบ่งพื้นที่บน GPU
+    checkCudaErrors(cudaMalloc(&d_c, sizeof(int)));
+
+    //เรียก kernel(แก่น) ไปทำงานบน GPU
+    add_kernel<<<1,1>>>(1,1,d_c);
+
+    //รอ GPU ประมวลผลเสร็จ & ตรวจข้อผิดพลาด
+    cudaDeviceSynchronize(); checkCudaErrors(cudaGetLastError());
+
+    //คัดลอกข้อมูลจาก GPU → CPU
+    checkCudaErrors(cudaMemcpy(&h_c, d_c, sizeof(int), cudaMemcpyDeviceToHost));
+    printf("1 + 1 = %d \n", h_c);
+
+    //ปลดแอกพื้นที่
+    checkCudaErrors(cudaFree(d_c));
+    return 0;
+}
+{% endhighlight %}
+
+เซฟไว้ในไฟล์ add.cu แล้ว compile&run ด้วย
+```
+nvcc -I/usr/local/cuda/samples/common/inc/ add.cu -o add
+./add
+
+==Result==
+1 + 1 = 2
+>>>
+```
+
+รวมๆ ก็ไม่มีความต่างกับภาษา C แต่กลับเต็มไปด้วยคำสั่งที่ไม่คุ้นหน้า (ยกเว้นเคยเล่นกับ openCL มาก่อน) เรามาไล่เรียงกันไปเรื่อยๆเพื่อเสริมความเข้าใจ
+
+- `__global__`
+
+ก่อนอื่น สำหรับการทำ GPU Programming โปรแกรมสามารถรันได้ทั้งบน CPU และ GPU หรือเขาจะเรียกว่า Host และ Device ตามลำดับ การประดับฟังก์ชั่นด้วย `__global__` จะทำให้ compiler nvcc รับรู้ว่าให้รันฟังก์ชั่นบน Device
+
+{% highlight C %}
+// GPU - Device
+__global__ void add_kernel(int a, int b, int *c) {
+    *c = a + b;
+}
+// CPU - Host
+void add_kernel(int a, int b, int *c) {
+    *c = a + b;
+}
+{% endhighlight %}
+
+- `cudaMalloc(&<target>, <size>)`
+
+ทำงานเหมือน `malloc` ในภาษา C แต่เป็นการแบ่งพื้นที่บน GPU ซึ่งต้องถูกแก้ไขบน GPU เท่านั้น อยากให้สังเกตว่าตัวแปรจะถูกนำด้วย `h_` หรือ `d_` ซึ่งหากพูดง่ายๆคือ host กับ device ตามลำดับ
+
+- `kernel<<<gridSize, blockSize>>>(args)`
+
+เราจะเรียกฟังก์ชั่นที่เราจะรันว่า kernel(แก่น) ตรงนี้ก็คือคำสั่งเรียกการทำงานของ GPU อย่างแท้จริง `gridSize` กับ `blockSize` อาจดูเป็นตัวแปรปริศนา แต่ในที่นี้จะทิ้งไว้เป็น `<<<1,1>>>` ก่อน (HINT: ในโปรแกรมนี้เรารันบน thread เส้นเดียว)
+
+ข้อสังเกต: เนื่องจากเราไม่สามารถส่งค่ากลับไปโดยตรงที่ Host ได้ เราจึงต้องส่ง pointer ของตัวแปรที่ **อยู่บน Device** เพื่ออัพเดทค่า ฟังก์ชั่นเลยเป็น `void`
+
+- `cudaMemcpy(&<target>, &<source>, <size>, <direction>)`
+
+การทิ้งค่าไว้บน Device นั้นไม่มีประโยชน์หากเราไม่ดึงค่าของมันกลับมาที่ Host `cudaMemcpy` คือฟังก์ชันที่คัดลอกข้อมูลไปมาได้ เพียงแค่ส่ง pointers ของเป้าหมายกับแหล่งที่มาและทิศทางก็เพียงพอ
+
+ในที่นี้ `cudaMemcpyDeviceToHost` เป็นตัวแปรที่มีไว้อยู่แล้ว ความหมายก็ตรงตัวคือคัดลอกจาก Device ไปยัง Host
+
+# -แบบทดสอบมินิ
+
+Q1. หากจะคัดลอกจาก Host → Device จะต้องใช้ตัวแปรชื่ออะไร
+<button onclick="hide(0)">Show/Hide</button>
+<div id="dotted-box">
+<div class="hidebox">
+A. เดาได้ไม่ยาก cudaMemcpyHostToDevice
+</div>
+</div>
+
+Q2. จงเติมโค้ดที่เหมาะสมลงไปใน `<size>` กับ `<direction>`
+
+{% highlight C %}
+__global__ void do_something(int *d_a, int *d_b) {
+    ...(do something)...
+}
+
+int const N = 10;
+
+int main() {
+    int h_a[N], *d_a;
+    int h_b[N], *d_b;
+    ...
+    for (int i = 0; i < N; ++i) h_a[i] = 2 * i;
+    checkCudaErrors(cudaMalloc(&d_a, <size>));
+    checkCudaErrors(cudaMalloc(&d_b, <size>));
+    checkCudaErrors(cudaMemcpy(d_a, h_a, <size>, <direction>));
+    do_something<<<1,1>>>(d_a, d_b);
+    ...
+}
+{% endhighlight %}
+
+<button onclick="hide(1)">Show/Hide</button>
+<div id="dotted-box">
+<div class="hidebox">
+A. size - sizeof(int) * N, direction - cudaMemcpyHostToDevice
+</div>
+</div>
+
+- `cudaFree(&<target>)`
+
+อันนี้คือปลดแอกคำสั่งก่อนหน้านี้ `cudaMalloc` หากลืมอาจทำให้ Memory ถูกใช้มากเกินไป (เพราะไม่ได้เคลียร์ออก)
+
+- `checkCudaErrors()`
+
+เช็คอาการว่ามีข้อผิดพลาดเกิดขึ้นหรือไม่
+
+หมายเหตุ: ตัวไฟล์ header จะอยู่ในโฟลเดอร์ของ "CUDA sample"
+
+- `cudaDeviceSynchronize()`
+
+เนื่องจากเราส่งงานไปให้ Device เรียบร้อย Host ก็พร้อมที่จะทำตามคำสั่งต่อไปหรืออีกนัยนึงคือ Asynchronus เพื่อรอการทำงานของ Device ให้เสร็จสมบูรณ์ การเรียก `cudaDeviceSynchronize()` มีความจำเป็นอย่างยิ่ง
+
+# จบบท
+เห็นว่าหลักการพื้นฐานของการเขียนโปรแกรมบน GPU ไม่ได้ยากเย็นขนาดนั้น จะคล้ายการตีปิงปองไปมาระหว่าง CPU & GPU อย่างไรก็ดี เห็นได้ชัดว่านี้คือโปรแกรมที่ไร้ประโยชน์เพราะไม่ได้ใช้ประโยชน์จาก GPU แม้แต่น้อย สำหรับตัวอย่างถัดไปเราจะทำสิ่งที่มีประโยชน์กว่าคือการ บวกเวกเตอร์ใดๆ

@@ -1,0 +1,9 @@
+---
+layout: post
+title:  "Understand your GPU 3: กราฟิกและเทคโนโลยี"
+date:   2018-09-10
+categories: computer
+author: barnrang
+series: gpu
+chapter: 3
+---
