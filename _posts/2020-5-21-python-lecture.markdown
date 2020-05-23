@@ -14,4 +14,6 @@ Python ขั้นพื้นฐาน
 
 โค้ดการเรียนการสอน: <a href="https://colab.research.google.com/drive/1T0DGr1xGGH0fyjOVeX2jmLpEKXSLvklQ?usp=sharing" target="blank">Google Colab เพิ่มคำตอบในคาบ</a>
 
+สไลด์: <a href="https://drive.google.com/file/d/1t9sq3CIAeoP3VHS9SwmKgVS-0rCrNQFX/view?usp=sharing" target="blank">slide</a>
+
 โค้ดเกม (หากอยากลองอ่าน): <a href="https://github.com/barnrang/python-lecture/tree/master/lecture-1" target="blank">Github</a>
