@@ -14,6 +14,13 @@ Python ขั้นพื้นฐาน
 
 โค้ดการเรียนการสอน: <a href="https://colab.research.google.com/drive/1T0DGr1xGGH0fyjOVeX2jmLpEKXSLvklQ?usp=sharing" target="blank">Google Colab เพิ่มคำตอบในคาบ</a>
 
+เฉลยแบบฝึกหัด: <a href="https://colab.research.google.com/drive/1cGx9roqQGO9x0QHPZvDh3KiYspJ1EBoL?usp=sharing" target="blank">Google Colab พร้อมคำตอบ </a>
+
 สไลด์: <a href="https://drive.google.com/file/d/1t9sq3CIAeoP3VHS9SwmKgVS-0rCrNQFX/view?usp=sharing" target="blank">slide</a>
 
 โค้ดเกม (หากอยากลองอ่าน): <a href="https://github.com/barnrang/python-lecture/tree/master/lecture-1" target="blank">Github</a>
+
+# Lecture 2
+Python ขั้นพื้นฐาน 2
+
+โค้ดการเรียนการสอน: <a href="https://colab.research.google.com/drive/11oARbIfgOyms8g3PMl5xrkwuUi7QTDLH?usp=sharing" target="blank">Google Colab (ระหว่างการก่อสร้าง)</a>
