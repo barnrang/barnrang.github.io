@@ -23,4 +23,4 @@ Python ขั้นพื้นฐาน
 # Lecture 2
 Python ขั้นพื้นฐาน 2
 
-โค้ดการเรียนการสอน: <a href="https://colab.research.google.com/drive/11oARbIfgOyms8g3PMl5xrkwuUi7QTDLH?usp=sharing" target="blank">Google Colab (ระหว่างการก่อสร้าง)</a>
+โค้ดการเรียนการสอน: <a href="https://colab.research.google.com/drive/11oARbIfgOyms8g3PMl5xrkwuUi7QTDLH?usp=sharing" target="blank">Google Colab</a>
