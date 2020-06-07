@@ -69,6 +69,7 @@ $>source ~/.zshrc
 เปิด terminal แล้วรัน `pip install pygame`
 
 ## <a name="try"></a>ลองรันโปรแกรม
-
+Under construction
 
 ## <a name="pycharm-install"></a>ติดตั้ง pycharm 
+Under construction
