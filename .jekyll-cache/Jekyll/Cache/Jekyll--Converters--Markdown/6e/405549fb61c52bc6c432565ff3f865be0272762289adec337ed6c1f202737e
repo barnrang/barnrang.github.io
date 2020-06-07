@@ -1,0 +1,77 @@
+I"&<h1 id="install-python-and-environment">Install Python and Environment</h1>
+
+<p>สำหรับใน lecture 3 เราจะทำการสร้างเกมซึ่งจำเป็นต้องใช้คอมพิวเตอร์ของตัวเองในการรันโปรแกรม ดังนั้นก่อนที่จะเริ่มคาบก็อยากให้ทุกคนทำการติดตั้ง <strong>python 3.6 หรือใหม่กว่านั้นลงเครื่อง</strong> เพื่อความสะดวก เราจะให้ทุกคนติดตั้ง miniconda ซึ่งเป็น python ที่มาด้วย library เพื่อการทำวิเคราะห์ข้อมูลทางวิทยาศาสตร์หรือคณิตศาสตร์มากมายรวมไว้ด้วยกัน หากเคยติดตั้ง python แล้วหรือรู้วิธีการก็ให้ข้ามไปติดตั้ง pygame ได้เลย</p>
+
+<ul>
+  <li><a href="#python-window">ติดตั้ง Python ลง Windows</a></li>
+  <li><a href="#python-mac">ติดตั้ง Python ลง Mac</a></li>
+  <li><a href="#pygame">ติดตั้ง library pygame</a></li>
+</ul>
+
+<p>สำหรับ program ที่ใช้ในการเขียนโค้ดก็สามารถเลือกใช้ได้ตามใจชอบ แต่หากยังไม่มีอันที่ชอบก็อยากให้ลองโหลด pycharm มาใช้กันดูครับ</p>
+
+<ul>
+  <li><a href="#pycharm-install">ติดตั้ง editor pycharm</a></li>
+</ul>
+
+<h2 id="ติดตั้ง-python-ลง-windows"><a name="python-window"></a>ติดตั้ง Python ลง Windows</h2>
+<ol>
+  <li>
+    <p>ก่อนอื่นเลยก็เข้า<a href="https://docs.conda.io/en/latest/miniconda.html" target="blank"> https://docs.conda.io/en/latest/miniconda.html </a> เพื่อไปติดตั้ง miniconda ให้เลือก version 3.6 ขึ้นไป เวอร์ชั่น 64 bit (ส่วนใหญ่สมัยนี้ก็คอม 64 bit กันแล้ว หากไม่มั่นใจให้ right click ที่ This PC -&gt; Properties แล้วเช็คตรงช่อง System type)</p>
+  </li>
+  <li>
+    <p>โหลดเสร็จกดติ้ดตั้งตามปกติได้เลย ให้ติดตั้งแบบ all users (หรือเอาจริงๆ ยังไงก็ได้) ตำแหน่งที่ลงก็ตรงไหนก็ได้ แนะนำให้ลงใน <code class="language-plaintext highlighter-rouge">C:/</code>
+<strong>หากถึงขั้นตอนที่อยู่ในรูปข้างล่างนี้ ให้ติ๊กช่องทั้งสอง</strong>
+<img src="http://localhost:4000/assets/images/anaconda_install.jpg" alt="AnacondaInstall" /></p>
+  </li>
+  <li>
+    <p>เปิด command prompt (search ช่องล่างซ้ายว่า cmd) แล้วลองพิมพ์ <code class="language-plaintext highlighter-rouge">python</code> แล้วกด enter มันจะขึ้นหน้าต่างต่อไปนี้ ให้พิมพ์ <code class="language-plaintext highlighter-rouge">exit()</code> กด enter เพื่อให้กลับมาที่เดิม</p>
+  </li>
+  <li>
+    <p>ลองรัน <code class="language-plaintext highlighter-rouge">conda list</code> ต่อเพื่อเช็คว่า miniconda ของเราทำงานตามที่คิดไว้หรือไม่</p>
+  </li>
+</ol>
+
+<p><img src="http://localhost:4000/assets/images/cmd_line_python.jpg" alt="cmdlinepython" /></p>
+
+<h2 id="ติดตั้ง-python-ลง-mac"><a name="python-mac"></a>ติดตั้ง Python ลง Mac</h2>
+<ol>
+  <li>
+    <p>ก่อนอื่นเลยก็เข้า<a href="https://docs.conda.io/en/latest/miniconda.html" target="blank"> https://docs.conda.io/en/latest/miniconda.html </a> เพื่อไปติดตั้ง miniconda ให้เลือก version 3.6 ขึ้นไปที่เขียนว่า <code class="language-plaintext highlighter-rouge">64-bit pkg</code></p>
+  </li>
+  <li>
+    <p>double click ที่ไฟล์ที่โหลดมา ติดตั้งตามขั้นตอนได้เลย
+หากเจอ pycharmIDE ก็ขอแนะนำให้ลงด้วย ค่อนข้างดี</p>
+  </li>
+  <li>เปิด terminal แล้วลองรัน <code class="language-plaintext highlighter-rouge">which conda</code> ค่าที่โชว์ควรจะเป็นตำแหน่งของไฟล์
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$&gt;which conda
+(ตัวอย่าง) /Users/barnrang/miniconda3/bin/conda
+</code></pre></div>    </div>
+    <p>หากไม่สำเร็จก็จะตอบกลับมาอย่างนี้</p>
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$&gt;which conda
+conda not found
+</code></pre></div>    </div>
+  </li>
+  <li>หากขั้นตอนที่ 3 รันสำเร็จ ให้ดำเนินการต่อโดยการรันคำสั่งต่อไปนี้ทีละบรรทัด (เผื่อเกิด error)
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$&gt;dirname `which conda` | awk '{print "export PATH=\""$1":$PATH\""}' &gt;&gt; ~/.zshrc
+$&gt;source ~/.zshrc
+</code></pre></div>    </div>
+  </li>
+  <li>
+    <p>ลองรัน <code class="language-plaintext highlighter-rouge">python</code> ควรจะขึ้นหน้าต่างเช่นนี้ ตรงที่ขีดเส้นใต้ควรมีคำว่า <code class="language-plaintext highlighter-rouge">Anaconda</code> ขึ้นมา
+<img src="http://localhost:4000/assets/images/python-terminal-mac.jpg" alt="cmdlinepython0max" /></p>
+  </li>
+  <li>กด <code class="language-plaintext highlighter-rouge">Ctrl+d</code> เพื่อออกจาก python</li>
+</ol>
+
+<h2 id="ติดตั้ง-library-pygame"><a name="pygame"></a>ติดตั้ง library pygame</h2>
+<h3 id="สำหรับ-window">สำหรับ window</h3>
+<p>เปิด command prompt แล้วรัน <code class="language-plaintext highlighter-rouge">pip install pygame</code></p>
+
+<h3 id="สำหรับ-mac">สำหรับ mac</h3>
+<p>เปิด terminal แล้วรัน <code class="language-plaintext highlighter-rouge">pip install pygame</code></p>
+
+<h2 id="ลองรันโปรแกรม"><a name="try"></a>ลองรันโปรแกรม</h2>
+
+<h2 id="ติดตั้ง-pycharm"><a name="pycharm-install"></a>ติดตั้ง pycharm</h2>
+:ET

@@ -1,0 +1,70 @@
+I"	<h3 id="api---application-program-interface">API - application program interface</h3>
+<p>Phone case - application is calling, interface is button or whatever. Program as
+the definition itself.</p>
+
+<p>WEB-API zoo - programmable web</p>
+
+<h1 id="something-cool">Something cool</h1>
+
+<ul>
+  <li>Google Geocoding (process a text to coordinate)
+    <ul>
+      <li>Send data by JSON format through HTTP request (http://xxxx/<your_query_text_here>)</your_query_text_here></li>
+    </ul>
+  </li>
+</ul>
+
+<h1 id="usage">USAGE</h1>
+<p>TimeOut - query a text of a location for marking on the map.</p>
+<ol>
+  <li>Geocoding requesting lat,long (backend request)</li>
+  <li>GGMAP for pin (front request)</li>
+</ol>
+
+<h1 id="credential">Credential</h1>
+<p>Authentic one program for using APIs</p>
+
+<h1 id="example">Example</h1>
+<ul>
+  <li>Wufoo! online survey</li>
+  <li>Trello group todolist
+We gonna retrieve the name from Wufoo to Trello –&gt; Use Zapier (Fucking Amazing)</li>
+</ul>
+
+<h3 id="ui--design">UI &amp; Design</h3>
+<h1 id="product-hunt">Product Hunt</h1>
+<p>A tool for many application (design, etc….)</p>
+<h1 id="roadmap">Roadmap</h1>
+<ol>
+  <li>Find inspiration<br />
+    - inspiration of everything - Dribble
+    - UI component - call for idea, UI movement, goodui.org
+    - Web design - AWWWARDS,</li>
+  <li>Find assets  <br />
+    - Graphical assets - Colors, Icon, Code Snippet, etc…
+    <ul>
+      <li>Color - Coolors, Colorhunt, NathanSpeller</li>
+      <li>Image - Flickr, PEXELS, Picsums</li>
+      <li>Icon - Thenounproject, iconstore</li>
+      <li>Fonts - fontface ninja (cool plugin!), Google fonts, myfonts
+        <ul>
+          <li>Tip: Don’t use to many fonts</li>
+        </ul>
+      </li>
+      <li>Gradient - uigradient (css available), codepen</li>
+    </ul>
+  </li>
+  <li>10 design rules of thumb
+    - CRAP. Contrast, repetition, alignment, proximity<br />
+    - Use time to define one identity<br />
+    - Font = Ratios<br />
+    - No more stock picture! (picture with macbook and coffee working office blah blah …)<br />
+    - Contrast Your text<br />
+    - Don’t play fancy with color<br />
+    - Design = Space<br />
+    - Adding Text with filter and shadow<br />
+    - Good design is the one you don’t notice<br />
+    - Think Proportional</li>
+  <li>Sketch demo</li>
+</ol>
+:ET

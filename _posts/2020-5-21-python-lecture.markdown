@@ -24,3 +24,8 @@ Python ขั้นพื้นฐาน
 Python ขั้นพื้นฐาน 2
 
 โค้ดการเรียนการสอน: <a href="https://colab.research.google.com/drive/11oARbIfgOyms8g3PMl5xrkwuUi7QTDLH?usp=sharing" target="blank">Google Colab</a>
+
+# Lecture 3
+Python เขียน Game flappy bird
+
+การติดตั้ง python พร้อมกับ pygame ลงเครื่อง: <a href="/lecture/python-lecture-install.html" target="blank">แนวทางการติดตั้ง</a>

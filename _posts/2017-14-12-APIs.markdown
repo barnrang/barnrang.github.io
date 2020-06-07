@@ -1,0 +1,59 @@
+---
+layout: post
+title:  "Le Wagon"
+date:   2017-12-14
+author: barnrang
+---
+
+### API - application program interface
+Phone case - application is calling, interface is button or whatever. Program as
+the definition itself.
+
+WEB-API zoo - programmable web
+
+# Something cool
+
+- Google Geocoding (process a text to coordinate)
+    - Send data by JSON format through HTTP request (http://xxxx/<your_query_text_here>)
+
+# USAGE
+TimeOut - query a text of a location for marking on the map.
+  1. Geocoding requesting lat,long (backend request)
+  2. GGMAP for pin (front request)
+
+# Credential
+Authentic one program for using APIs
+
+# Example
+- Wufoo! online survey
+- Trello group todolist
+We gonna retrieve the name from Wufoo to Trello --> Use Zapier (Fucking Amazing)
+
+### UI & Design
+# Product Hunt
+A tool for many application (design, etc....)
+# Roadmap
+  1. Find inspiration  
+    - inspiration of everything - Dribble
+    - UI component - call for idea, UI movement, goodui.org
+    - Web design - AWWWARDS,
+  2. Find assets    
+    - Graphical assets - Colors, Icon, Code Snippet, etc...  
+      - Color - Coolors, Colorhunt, NathanSpeller
+      - Image - Flickr, PEXELS, Picsums
+      - Icon - Thenounproject, iconstore
+      - Fonts - fontface ninja (cool plugin!), Google fonts, myfonts  
+        - Tip: Don't use to many fonts
+      - Gradient - uigradient (css available), codepen
+  3. 10 design rules of thumb
+    - CRAP. Contrast, repetition, alignment, proximity  
+    - Use time to define one identity  
+    - Font = Ratios  
+    - No more stock picture! (picture with macbook and coffee working office blah blah ...)  
+    - Contrast Your text  
+    - Don't play fancy with color  
+    - Design = Space  
+    - Adding Text with filter and shadow  
+    - Good design is the one you don't notice  
+    - Think Proportional
+  4. Sketch demo
