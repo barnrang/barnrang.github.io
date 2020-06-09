@@ -14,6 +14,7 @@ chapter: 2
 - [ติดตั้ง Python ลง Windows](#python-window)
 - [ติดตั้ง Python ลง Mac](#python-mac)
 - [ติดตั้ง library pygame](#pygame)
+- [ลองรันโปรแกรม](#try)
 
 สำหรับ program ที่ใช้ในการเขียนโค้ดก็สามารถเลือกใช้ได้ตามใจชอบ แต่หากยังไม่มีอันที่ชอบก็อยากให้ลองโหลด pycharm มาใช้กันดูครับ
 
@@ -69,7 +70,12 @@ $>source ~/.zshrc
 เปิด terminal แล้วรัน `pip install pygame`
 
 ## <a name="try"></a>ลองรันโปรแกรม
-Under construction
+ดาวน์โหลดเกมจาก link ต่อไปนี้ <a href="https://drive.google.com/file/d/18whhAvsc1bnNpf9KR_zSqQGwI8dRujoW/view?usp=sharing" target="blank">https://drive.google.com/file/d/18whhAvsc1bnNpf9KR_zSqQGwI8dRujoW/view?usp=sharing</a> แล้วแตกไฟล์ในโฟลเดอร์ที่ต้องการ จะเห็นโฟลเดอร์ชื่อ fappy-bird
+
+เปิด command prompt(win)/terminal(mac) ใช้ `cd <folder-name>` เพื่อย้ายไปยังตำแหน่งโฟลเดอร์ `fappy-brid` จากนั้นให้ลองรัน `python main.py` หากรันสำเร็จจะขึ้นหน้าต่างดำๆ ซึ่งให้ลองกด `space` ค้างไว้แล้วมั้นจะขึ้นข้อความ
+
+```Key space is being pressed```
+![python-game]({{"/assets/images/game-lecture.png" | absolute_url}})
 
 ## <a name="pycharm-install"></a>ติดตั้ง pycharm 
 Under construction
