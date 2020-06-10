@@ -29,3 +29,5 @@ Python ขั้นพื้นฐาน 2
 Python เขียน Game flappy bird
 
 การติดตั้ง python พร้อมกับ pygame ลงเครื่อง: <a href="/lecture/python-lecture-install.html" target="blank">แนวทางการติดตั้ง</a>
+
+โค้ดเกมสมบูรณ์(spoiler): <a href="https://github.com/barnrang/python-lecture/tree/complete-game/lecture-3/fappy-bird"> here </a>
