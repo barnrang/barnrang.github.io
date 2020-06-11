@@ -78,4 +78,4 @@ $>source ~/.zshrc
 ![python-game]({{"/assets/images/game-lecture.png" | absolute_url}})
 
 ## <a name="pycharm-install"></a>ติดตั้ง pycharm 
-Under construction
+เข้าไอ้นี่ <a href="https://www.jetbrains.com/pycharm/download/#section=windows"> https://www.jetbrains.com/pycharm/download/#section=windows </a> แล้วกด **Community Edition**. ติดตั้งไม่ยาก
