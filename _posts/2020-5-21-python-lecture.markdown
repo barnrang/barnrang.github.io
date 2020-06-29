@@ -25,9 +25,13 @@ Python ขั้นพื้นฐาน 2
 
 โค้ดการเรียนการสอน: <a href="https://colab.research.google.com/drive/11oARbIfgOyms8g3PMl5xrkwuUi7QTDLH?usp=sharing" target="blank">Google Colab</a>
 
+bideo: <a href="https://drive.google.com/file/d/1E1py4AKgluZeVUpwTF5xWgC9mmMtRJi9/view?usp=sharing" target="blank">lecture 2</a>
+
 # Lecture 3
 Python เขียน Game flappy bird
 
 การติดตั้ง python พร้อมกับ pygame ลงเครื่อง: <a href="/lecture/python-lecture-install.html" target="blank">แนวทางการติดตั้ง</a>
 
 โค้ดเกมสมบูรณ์(spoiler): <a href="https://github.com/barnrang/python-lecture/tree/complete-game/lecture-3/fappy-bird"> here </a>
+
+bideo: <a href="https://drive.google.com/file/d/1IKNeFU1IabPHhx14cA8kK8I0e03GhgNL/view?usp=sharing">lecture 3</a>
