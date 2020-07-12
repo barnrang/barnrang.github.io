@@ -35,3 +35,10 @@ Python เขียน Game flappy bird
 โค้ดเกมสมบูรณ์(spoiler): <a href="https://github.com/barnrang/python-lecture/tree/complete-game/lecture-3/fappy-bird"> here </a>
 
 bideo: <a href="https://drive.google.com/file/d/1IKNeFU1IabPHhx14cA8kK8I0e03GhgNL/view?usp=sharing">lecture 3</a>
+
+# Lecture 4
+Python numpy, matplotlib, pandas เส้นทางสู่การเป็น data science lololol!!!!
+
+โค้ดการเรียนการสอน: <a href="https://colab.research.google.com/drive/1vvQWRRh4Tfk4ddfxlcVX8IXLLMU4EA83?usp=sharing" target="blank">Google Colab</a>
+
+Titanic Dataset: <a href="https://www.kaggle.com/c/titanic" target="blank">https://www.kaggle.com/c/titanic</a>
